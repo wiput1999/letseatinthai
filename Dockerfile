@@ -79,9 +79,7 @@ RUN chmod 755 /cmd.sh
 
 # add test PHP file
 COPY application/ /usr/share/nginx/html
-COPY service_account.json /usr/share/key/service_account.json
 
-RUN chown www-data.www-data /usr/share/key/service_account.json
 RUN chown -Rf www-data.www-data /usr/share/nginx/html/
 
 # Expose Ports
