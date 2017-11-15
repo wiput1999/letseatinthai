@@ -1,0 +1,25 @@
+#!/bin/sh
+set -e
+
+# Important!
+# If edited from dos os (like window)
+# convert this file to unix first
+# with dos2unix
+
+if [ "$1" = "artisan" ]; then
+    # if executing artisan
+    # then passed to php artisan
+    echo "Executing artisan command!"
+    
+    # set to execute php artisan
+    set -- php "$@"
+else
+    # else, set startup normally
+    # Copy from docker-php-entrypoint
+    # first arg is `-f` or `--some-option`
+    if [ "${1#-}" != "$1" ]; then
+        set -- apache2-foreground "$@"
+    fi
+fi
+
+exec "$@"

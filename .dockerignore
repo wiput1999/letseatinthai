@@ -1,0 +1,38 @@
+# Jetbrains IDE
+.idea
+_ide_helper.php
+
+# Node log
+npm-debug.log
+yarn-error.log
+
+# Application NodeJS dependencies
+application/node_modules
+
+# Application storages & caches
+application/bootstrap/cache
+!application/bootstrap/cache/.gitignore
+application/storage/app
+!application/storage/app/.gitignore
+application/storage/app/public
+!application/storage/app/public/.gitignore
+application/storage/framework
+!application/storage/framework/.gitignore
+application/storage/framework/cache
+!application/storage/framework/cache/.gitignore
+application/storage/framework/sessions
+!application/storage/framework/sessions/.gitignore
+application/storage/framework/testing
+!application/storage/framework/testing/.gitignore
+application/storage/framework/views
+!application/storage/framework/views/.gitignore
+application/storage/logs
+!application/storage/logs/.gitignore
+application/.env
+
+# Ignore storage symlinks
+application/public/hot
+application/public/storage
+
+# Any key storage
+application/storage/*.key
