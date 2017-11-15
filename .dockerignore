@@ -29,6 +29,7 @@ application/storage/framework/views
 application/storage/logs
 !application/storage/logs/.gitignore
 application/.env
+application/vendor
 
 # Ignore storage symlinks
 application/public/hot

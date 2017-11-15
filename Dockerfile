@@ -21,7 +21,7 @@ add-apt-repository ppa:nginx/$nginx && \
 LANG=C.UTF-8 add-apt-repository ppa:ondrej/php && \
 apt-get update && \
 apt-get upgrade -y && \
-BUILD_PACKAGES="supervisor nginx php${IMAGE_PHP_VERSION}-fpm git php${IMAGE_PHP_VERSION}-mysql php-apcu php${IMAGE_PHP_VERSION}-curl php${IMAGE_PHP_VERSION}-gd php${IMAGE_PHP_VERSION}-intl php${IMAGE_PHP_VERSION}-mcrypt php${IMAGE_PHP_VERSION}-memcache php${IMAGE_PHP_VERSION}-sqlite php${IMAGE_PHP_VERSION}-tidy php${IMAGE_PHP_VERSION}-xmlrpc php${IMAGE_PHP_VERSION}-xsl php${IMAGE_PHP_VERSION}-pgsql php${IMAGE_PHP_VERSION}-mongo php${IMAGE_PHP_VERSION}-ldap pwgen php${IMAGE_PHP_VERSION}-cli curl" && \
+BUILD_PACKAGES="supervisor nginx php${IMAGE_PHP_VERSION}-fpm git php${IMAGE_PHP_VERSION}-mysql php-apcu php${IMAGE_PHP_VERSION}-curl php${IMAGE_PHP_VERSION}-gd php${IMAGE_PHP_VERSION}-intl php${IMAGE_PHP_VERSION}-mcrypt php${IMAGE_PHP_VERSION}-memcache php${IMAGE_PHP_VERSION}-sqlite php${IMAGE_PHP_VERSION}-tidy php${IMAGE_PHP_VERSION}-xmlrpc php${IMAGE_PHP_VERSION}-xsl php${IMAGE_PHP_VERSION}-pgsql php${IMAGE_PHP_VERSION}-mongo php${IMAGE_PHP_VERSION}-ldap pwgen php${IMAGE_PHP_VERSION}-cli php-mbstring curl zip unzip php${IMAGE_PHP_VERSION}-zip" && \
 apt-get -y install $BUILD_PACKAGES && \
 apt-get remove --purge -y software-properties-common && \
 apt-get autoremove -y && \
@@ -81,6 +81,10 @@ RUN chmod 755 /cmd.sh
 COPY application/ /usr/share/nginx/html
 
 RUN chown -Rf www-data.www-data /usr/share/nginx/html/
+
+WORKDIR /usr/share/nginx/html
+
+RUN composer install
 
 # Expose Ports
 EXPOSE 80
