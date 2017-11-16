@@ -1,6 +1,7 @@
 
 // Body
 $body-bg: #f5f8fa;
+$mobile-bp: max-width: 768px;
 
 // Borders
 $laravel-border-color: darken($body-bg, 10%);
@@ -18,10 +19,30 @@ $brand-danger: #bf5329;
 
 // Typography
 $icon-font-path: "~bootstrap-sass/assets/fonts/bootstrap/";
-$font-family-sans-serif: "Raleway", sans-serif;
+$font-family-sans-serif: "Open Sans", "Kanit", arial, sans-serif;
 $font-size-base: 14px;
 $line-height-base: 1.6;
-$text-color: #636b6f;
+
+$text-color: #111;
+$text-grey: #888;
+$food-sub-color: #aaa;
+$darkbg-font-color: #FFF;
+
+$p-size: 1.25em;
+$h1-size: 32px;
+$h2-size: 28px;
+$heading-size: 24px; //used in <header>
+$food-title-size: 15px;
+$food-sub-size: 11px;
+$food-info-size: 15px;
+
+$p-weight: 300;
+$heading-weight: 300;
+
+$p-margin: 0 0 2em 0;
+$list-margin: 0 0 1.5em 0;
+
+$little-spacing: 0.1em;
 
 // Navbar
 $navbar-default-bg: #fff;
@@ -36,3 +57,24 @@ $input-color-placeholder: lighten($text-color, 30%);
 
 // Panels
 $panel-default-heading-bg: #fff;
+
+//section
+$section-margin: 6em 0;
+$header-padding: 6em 0;
+
+//Foods
+$northeast-color: #ED4337;
+$northeast-btn: #FF6A5E;
+$northeast-btn-hover: #FFAB5E;
+
+$north-color: #4C9F11;
+$north-btn: #89C627;
+$north-btn-hover: #B8DD51;
+
+$south-color: #D5682B;
+$south-btn: #E99E1B;
+$south-btn-hover: #FFAB5E;
+
+$generic-color: #F1C500;
+$generic-btn: #FFDF51;
+$generic-btn-hover: #FFD100;
