@@ -1,5 +1,8 @@
 @extends('template.partials')
 @section('content')
+{{--subNavbar--}}
+@include('template.subnav')
+
 <div class="page">
     <header class="your-order">
         <div class="relative container align-left">

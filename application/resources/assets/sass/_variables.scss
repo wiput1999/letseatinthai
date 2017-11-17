@@ -2,6 +2,8 @@
 // Body
 $body-bg: #f5f8fa;
 $mobile-bp: max-width: 768px;
+$main-color: #4d80b3;
+$main-nav: #18528B;
 
 // Borders
 $laravel-border-color: darken($body-bg, 10%);
@@ -64,17 +66,21 @@ $header-padding: 6em 0;
 
 //Foods
 $northeast-color: #ED4337;
+$northeast-nav: #CE2113;
 $northeast-btn: #FF6A5E;
 $northeast-btn-hover: #FFAB5E;
 
 $north-color: #4C9F11;
+$north-nav: #368200;
 $north-btn: #89C627;
 $north-btn-hover: #B8DD51;
 
 $south-color: #D5682B;
+$south-nav: #DC4A00;
 $south-btn: #E99E1B;
 $south-btn-hover: #FFAB5E;
 
 $generic-color: #F1C500;
+$generic-nav: #F1B300;
 $generic-btn: #FFDF51;
 $generic-btn-hover: #FFD100;

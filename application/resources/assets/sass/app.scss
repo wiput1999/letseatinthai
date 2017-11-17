@@ -67,8 +67,12 @@ section {margin: $section-margin;}
 .align-right {text-align: right;}
 
 .mb-0 {margin-bottom: 0;}
+@media screen and max-width($mobile-bp) {.mb-sm-20 {margin-bottom: 20px;}}
+.mb-30 {margin-bottom: 30px;}
 .mb-60 {margin-bottom: 60px;}
 .pt-10 {padding-top: 10px;}
+
+.page-section {padding: 140px 0;}
 
 /* ==============================
    Headings
@@ -76,7 +80,14 @@ section {margin: $section-margin;}
 
 h1{font-size: $h1-size;}
 h2{font-size: $h2-size;}
-   
+.hs-line-3{
+    margin-top: 0;
+    position: relative;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: rgba(255,255,255, .7);
+}
 .hs-line-4{
     @include heading;
     font-size: 14px;
@@ -212,6 +223,110 @@ h2{font-size: $h2-size;}
     color: #fff;
 }
 
+/* ==============================
+   Classic menu bar
+   ============================== */
+
+
+/* Logo (in navigation panel)*/
+
+.nav-logo-wrap{
+    float: left;
+    margin-right: 20px;
+}
+.nav-logo-wrap .logo{
+    display: table-cell;
+    vertical-align: middle;
+    max-width: 118px;
+    height: 75px;
+
+    -webkit-transition: all 0.27s cubic-bezier(0.000, 0.000, 0.580, 1.000);
+    -moz-transition: all 0.27s cubic-bezier(0.000, 0.000, 0.580, 1.000);
+    -o-transition: all 0.27s cubic-bezier(0.000, 0.000, 0.580, 1.000);
+    -ms-transition: all 0.27s cubic-bezier(0.000, 0.000, 0.580, 1.000);
+    transition: all 0.27s cubic-bezier(0.000, 0.000, 0.580, 1.000);
+}
+.nav-logo-wrap .logo img{
+    max-height: 100%;
+}
+.nav-logo-wrap .logo:before,
+.nav-logo-wrap .logo:after{
+    display: none;
+}
+.logo,
+a.logo:hover{
+    font-family: "Kanit", Dosis, arial, sans-serif;
+    font-size: 18px;
+    font-weight: 400 !important;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    text-decoration: none;
+    color: #FFF;
+}
+
+/*
+ * Desktop nav
+ */
+
+.main-nav{
+    width: 100%;
+    height: 75px !important;
+    position: relative;
+    top: 0;
+    left: 0;
+    text-align: left;
+    background: $main-nav;
+    box-shadow:  0 1px 0 rgba(0,0,0,.05);
+    z-index: 1030;
+    @include cubic_form;
+}
+.no-header .main-nav{background: $main-color;}
+.northeast .main-nav{background: $northeast-nav;}
+.north .main-nav{background: $north-nav;}
+.south .main-nav{background: $south-nav;}
+.generic .main-nav{background: $generic-nav;}
+.small-height{height: 55px !important;}
+.small-height .inner-nav ul li a{
+    height: 55px !important;
+    line-height: 55px !important;
+}
+.inner-nav{
+    display: inline-block;
+    position: relative;
+    float: right;
+    ul{
+        float: right;
+        margin: auto;
+        font-size: 11px;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        text-align: center;
+        line-height: 1.3;
+        li {
+            float: left;
+            margin-left: 30px;
+            position: relative;
+            a{
+                color: #FFF;
+                letter-spacing: 2px;
+                display: inline-block;
+                box-sizing: border-box;
+                text-decoration: none;
+            
+                @include cubic_form;
+            }
+        }
+    }
+}
+.inner-nav ul > li:first-child > a{
+
+}
+.inner-nav ul li a:hover,
+.inner-nav ul li a.active{
+    color: #000;
+    text-decoration: none;
+}
+
 
 /* ==============================
     Browse
@@ -332,3 +447,77 @@ header{padding: $header-padding;}
   }
 }
   
+
+/* ==============================
+    Footer
+   ============================== */
+
+.footer{
+    text-align: center;
+    font-size: 12px;
+    a {
+        color: $text-grey;
+        text-decoration: none;
+        @include cubic_form;
+        &:hover{color: $main-color; text-decoration: underline;}
+    }
+  }
+.footer-copy{
+    margin-bottom: 5px;
+    text-transform: uppercase;
+    letter-spacing: 0.5em;
+}
+.footer-made{
+    font-size: 11px;
+    color: #999;
+}
+.footer-social-links{
+    font-size: 14px;
+    a {
+        width: 25px;
+        height: 25px;
+        line-height: 25px !important;
+        position: relative;
+        margin: 0 6px;
+        text-align: center;
+        display: inline-block;
+        color: $main-color;
+        @include cubic_text;
+        &:before {
+            content: "";
+            display: inline-block;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            border: 1px solid $main-color;
+            border-radius: 2px;
+            transform: rotate(45deg);
+            @include cubic_form;
+        }
+        &:hover {
+            color: #fff;
+            &:before {background: $main-color;}
+        }
+            
+
+        i, span {
+            position: relative;
+            top: 0;
+            left: 0;
+        }
+    }
+}
+
+a.link-to-top{
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    color: rgba(0,0,0, .2);
+    font-size: 48px;
+}
