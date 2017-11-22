@@ -3,8 +3,8 @@
     <div class="full-wrapper relative clearfix">
 
         <div class="nav-logo-wrap local-scroll">
-            <a href="{{ $home }}" class="logo">
-                <img src="{{ $logo }}" alt="" />
+            <a href="" class="logo">
+                <img src="" alt="" />
             </a>
         </div>
         <div class="mobile-nav">
@@ -13,12 +13,8 @@
         <!-- Main Menu -->
         <div class="inner-nav desktop-nav">
             <ul class="clearlist local-scroll">
-                <li><a class="active" href="#">Home</a></li>
-                <li><a href="{{ $generic }}">Generic Food</a></li>
-                <li><a href="{{ $northeast }}">Northeastern Food (Isan)</a></li>
-                <li><a href="{{ $north }}">Northern Food</a></li>
-                <li><a href="{{ $south }}">Southern Food</a></li>
-                <li><a href="{{ $about }}">About Us</a></li>
+                <li><a class="active" href="">Home</a></li>
+                <li><a href="">About Us</a></li>
 
             </ul>
         </div>
