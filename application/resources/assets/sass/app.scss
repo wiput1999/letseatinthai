@@ -37,7 +37,7 @@
 /* ==============================
    General
    ============================== */
-  
+
 body {
     color: $text-color;
     font-size: $font-size-base;
@@ -54,7 +54,7 @@ p {
 a {
     color: $text-color;
     &:hover{
-        color: $text-grey; 
+        color: $text-grey;
         text-decoration: none;}
 }
 
@@ -63,7 +63,7 @@ img {max-width: 100%;}
 section {margin: $section-margin;}
 
 
-video { 
+video {
     position: fixed;
     top: 50%;
     left: 50%;
@@ -83,7 +83,7 @@ video {
 
 .mb-0 {margin-bottom: 0;}
 .mb-sm-20 {
-    @media screen and max-width($mobile-bp) {margin-bottom: 20px;}
+    @media screen and (max-width: $mobile-bp) {margin-bottom: 20px;}
 }
 .mb-30 {margin-bottom: 30px;}
 .mb-60 {margin-bottom: 60px;}
@@ -156,7 +156,7 @@ h2{font-size: $h2-size;}
       box-shadow: none;
       @include cubic_text;
   }
-  
+
   .btn-mod:hover,
   .btn-mod:focus,
   a.btn-mod:hover,
@@ -180,7 +180,7 @@ h2{font-size: $h2-size;}
     padding: 12px 45px;
     font-size: 14px;
 }
-  
+
 /* ==============================
    Forms 
    ============================== */
@@ -212,7 +212,7 @@ h2{font-size: $h2-size;}
 
     &:hover {border-color: rgba(0,0,0, .2);}
     &:focus {border-color: rgba(0,0,0, .7);  box-shadow: 0 0 3px rgba(0,0,0, .3);  outline: none;}
-    
+
 
 }
 
@@ -332,7 +332,7 @@ a.logo:hover{
                 display: inline-block;
                 box-sizing: border-box;
                 text-decoration: none;
-            
+
                 @include cubic_form;
             }
         }
@@ -367,7 +367,7 @@ header{padding: $header-padding;}
     a {
         color: $text-grey;
         text-decoration: none;
-        @include cubic_text; 
+        @include cubic_text;
         &:hover {color: $text-color;}
     }
 }
@@ -378,7 +378,7 @@ header{padding: $header-padding;}
     font-size: $food-sub-size;
     text-decoration: none;
     color: $food-sub-color;
-    @include cubic_text; 
+    @include cubic_text;
     &:hover{color: $text-color;}
 }
 
@@ -436,7 +436,7 @@ header{padding: $header-padding;}
   .card:hover {
     background: #FAFAFA;
   }
-  
+
   .menu-item {
     height: 160px;
     width: 200px;
@@ -467,6 +467,7 @@ header{padding: $header-padding;}
   
   
   
+
 
 /* ==============================
     Footer
@@ -520,7 +521,7 @@ header{padding: $header-padding;}
             color: #fff;
             &:before {background: $main-color;}
         }
-            
+
 
         i, span {
             position: relative;
@@ -530,7 +531,7 @@ header{padding: $header-padding;}
     }
 }
 
-a.link-to-top{
+a.link-to-top {
     position: absolute;
     bottom: 20px;
     right: 20px;

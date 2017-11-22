@@ -9,7 +9,7 @@
         <div class="js-height-full container">
 
             <div class="bg-video-wrapper">
-                <video poster=" " id="bgvid" autoplay muted loop>
+                <video poster="{{ asset('/video/video-restaurant.mp4') }}" id="bgvid" autoplay muted loop>
                 <source src=" " type="video/mp4">
                 </video>
             </div>
