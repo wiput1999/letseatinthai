@@ -83,7 +83,7 @@ video {
 
 .mb-0 {margin-bottom: 0;}
 .mb-sm-20 {
-    @media screen and max-width($mobile-bp) {margin-bottom: 20px;}
+    @media screen and (max-width: $mobile-bp) {margin-bottom: 20px;}
 }
 .mb-30 {margin-bottom: 30px;}
 .mb-60 {margin-bottom: 60px;}
@@ -338,9 +338,7 @@ a.logo:hover{
         }
     }
 }
-.inner-nav ul > li:first-child > a{
-
-}
+.inner-nav ul > li:first-child > a,
 .inner-nav ul li a:hover,
 .inner-nav ul li a.active{
     color: #000;
@@ -399,6 +397,7 @@ header{padding: $header-padding;}
     background: $northeast-btn-hover;
     color: #FFF;
   }
+}
 
   .north .btn-mod.add-to-order {
     float: right;
@@ -409,6 +408,7 @@ header{padding: $header-padding;}
     background: $north-btn-hover;
     color: #FFF;
   }
+}
 
   .south .btn-mod.add-to-order {
     float: right;
@@ -419,6 +419,7 @@ header{padding: $header-padding;}
     background: $south-btn-hover;
     color: #FFF;
   }
+}
 
   .generic .btn-mod.add-to-order {
     float: right;
@@ -429,13 +430,12 @@ header{padding: $header-padding;}
     background: $generic-btn-hover;
     color: #FFF;
   }
+}
 
 .card {
     background: #FFF;
-  }
-  .card:hover {
-    background: #FAFAFA;
-  }
+    &:hover {background: #FAFAFA;}
+}
   
   .menu-item {
     height: 160px;
@@ -443,10 +443,7 @@ header{padding: $header-padding;}
     display: inline-block;
     overflow: hidden;
     position: relative;
-    @media screen and ($mobile-bp) {
-          height: 200px;
-          width: 100%;
-    }
+    @media screen and (max-width: $mobile-bp) { height: 200px; width: 100%; }
 
     img {
         position:absolute;
@@ -458,12 +455,9 @@ header{padding: $header-padding;}
         max-width: none;
         max-height: 100%;
         object-fit: fill;
-        @media screen and ($mobile-bp) {
-            width: 100%;
-            max-height: none;
-        }
+        @media screen and (max-width: $mobile-bp) { width: 100%; max-height: none; }
     }
-}
+ }
   
   
   
