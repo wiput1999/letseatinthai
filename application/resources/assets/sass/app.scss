@@ -219,7 +219,7 @@ h2{font-size: $h2-size;}
 }
 
 /* ==============================
-   Forms 
+   Forms
    ============================== */
 
 .form input[type="text"],
@@ -335,7 +335,7 @@ a.logo:hover{
     position: relative;
 }
 .home-text{
-    display: table-cell;
+    //display: table-cell;
     height: 100%;
     vertical-align: middle;
 }
@@ -426,7 +426,7 @@ a.logo:hover{
     cursor: pointer;
 
     user-select: none;
-    @include cubic_form()
+    @include cubic_form();
 
     transition-property:  background, color;
 
@@ -587,7 +587,7 @@ header{padding: $header-padding;}
     background: #FFF;
     &:hover {background: #FAFAFA;}
 }
-  
+
   .menu-item {
     height: 160px;
     width: 200px;
@@ -609,9 +609,9 @@ header{padding: $header-padding;}
         @media screen and (max-width: $mobile-bp) { width: 100%; max-height: none; }
     }
  }
-  
-  
-  
+
+
+
 
 
 /* ==============================
