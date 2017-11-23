@@ -78,6 +78,27 @@ video {
     transition: 1s opacity;
 }
 
+.bg-video-overlay {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.bg-dark-alfa-70:before,
+.bg-dark-alfa-70 .YTPOverlay:before{
+    content: " ";
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(17,17,17, .7);
+    z-index: -1;
+}
+
 .align-left {text-align: left;}
 .align-center {text-align: center;}
 .align-right {text-align: right;}
@@ -94,6 +115,8 @@ video {
 .page-section {padding: 100px 0; background: #FFF;}
 .small-section{padding: 70px 0;}
 
+.bg-white{ background-color: #fff; }
+.bg-gray-lighter{ background-color: #f8f8f8; }
 .white{ color: #fff !important; }
 .black{ color: #111 !important; }
 
@@ -297,6 +320,28 @@ a.logo:hover{
     text-decoration: none;
     color: #FFF;
 }
+.main-nav.transparent{
+    background: transparent !important;
+}
+.main-nav.js-transparent{
+    -webkit-transition: all 0.27s cubic-bezier(0.000, 0.000, 0.580, 1.000);
+    -moz-transition: all 0.27s cubic-bezier(0.000, 0.000, 0.580, 1.000);
+    -o-transition: all 0.27s cubic-bezier(0.000, 0.000, 0.580, 1.000);
+    -ms-transition: all 0.27s cubic-bezier(0.000, 0.000, 0.580, 1.000);
+    transition: all 0.27s cubic-bezier(0.000, 0.000, 0.580, 1.000);
+}
+
+.home-content{
+    position: relative;
+}
+.home-text{
+    display: table-cell;
+    height: 100%;
+    vertical-align: middle;
+}
+.full-wrapper {
+    margin: 0 2%;
+}
 
 /*
  * Desktop nav
@@ -319,6 +364,16 @@ a.logo:hover{
 .north .main-nav{background: $north-nav;}
 .south .main-nav{background: $south-nav;}
 .generic .main-nav{background: $generic-nav;}
+.main-nav.dark .inner-nav ul > li > a:hover, .main-nav.dark .inner-nav ul > li > a.active {
+    height: 75px;
+    line-height: 75px;
+    color: #fff;
+}
+.main-nav.dark .inner-nav ul > li > a {
+    height: 75px;
+    line-height: 75px;
+    color: rgba(255,255,255, .7);
+}
 .small-height{height: 55px !important;}
 .small-height .inner-nav ul li a{
     height: 55px !important;
