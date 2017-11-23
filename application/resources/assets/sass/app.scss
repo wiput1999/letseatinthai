@@ -452,7 +452,18 @@ a.logo:hover{
     text-align: center;
     font-size: 21px;
 }
-
+.stick-fixed{
+    position: fixed !important;
+    top: 0;
+    left: 0;
+}
+.main-nav.dark {
+    background-color: #4d80b3;
+    opacity: 0.9;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+}
 
 
 
