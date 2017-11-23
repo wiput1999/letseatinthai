@@ -9,8 +9,8 @@
         <div class="js-height-full container">
 
             <div class="bg-video-wrapper">
-                <video poster="{{ asset('/video/video-restaurant.mp4') }}" id="bgvid" autoplay muted loop>
-                <source src=" " type="video/mp4">
+                <video poster="{{ asset('/images/poster.jpg') }}" id="bgvid" autoplay muted loop>
+                <source src="{{ asset('/video/video-restaurant.mp4') }}" type="video/mp4">
                 </video>
             </div>
 
@@ -18,7 +18,7 @@
                 <div class="home-text">
                 <div class="row mb-30 mb-sm-20">
                         <div class="col-sm-6 col-sm-offset-3 col-xs-8 col-xs-offset-2">
-                            <img src=" " alt="" />
+                            <img src="{{ asset('/images/logo.png') }}" alt="" />
                         </div>
                 </div>
                 <h2 class="hs-line-3 mb-0">
