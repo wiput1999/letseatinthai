@@ -4,7 +4,7 @@
 //@import url('https://fonts.googleapis.com/css?family=Kanit:300,400');
 
 // Variables
-//@import "variables";
+@import "variables";
 
 // Animate.css
 @import "~animate.css/animate.css";
@@ -59,6 +59,7 @@ a {
 }
 
 ul, ol{margin: $list-margin;}
+.clearlist, .clearlist li {list-style: none; padding: 0; margin: 0; background: none;}
 img {max-width: 100%;}
 section {margin: $section-margin;}
 
@@ -88,8 +89,10 @@ video {
 .mb-30 {margin-bottom: 30px;}
 .mb-60 {margin-bottom: 60px;}
 .pt-10 {padding-top: 10px;}
+.pb-60{padding-bottom:60px}
 
 .page-section {padding: 100px 0; background: #FFF;}
+.small-section{padding: 70px 0;}
 
 .white{ color: #fff !important; }
 .black{ color: #111 !important; }
@@ -123,6 +126,17 @@ h2{font-size: $h2-size;}
 .your-order .hs-line-11 {
   letter-spacing: 0.2em;
   color: $darkbg-font-color;
+}
+
+.section-title {
+    margin-bottom: 15px;
+    font-size: 18px;
+    font-weight: 400;
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 0.25em;
+    line-height: 1.4;
+    color: #4d80b3;
 }
 
 .section-heading {
@@ -345,10 +359,81 @@ a.logo:hover{
     text-decoration: none;
 }
 
+/* Mobile Nav */
+.mobile-nav{
+    display: none;
+    float: right;
+    vertical-align: middle;
+    font-size: 11px;
+    text-transform: uppercase;
+    border-left: 1px solid rgba(0,0,0, .05);
+    border-right: 1px solid rgba(0,0,0, .05);
+    cursor: pointer;
+
+    user-select: none;
+    @include cubic_form()
+
+    transition-property:  background, color;
+
+    &:hover, .active {
+        background: #fff;
+        color: #777;
+    }
+
+    &:active { box-shadow: 0 0 35px rgba(0,0,0,.05) inset;}
+}
+
+.no-js .mobile-nav{
+    width: 55px;
+    height: 55px;
+}
+.mobile-on .mobile-nav{
+    display: table;
+}
+.mobile-nav .fa{
+    height: 100%;
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    font-size: 21px;
+}
+
+
+
 
 /* ==============================
     Browse
    ============================== */
+
+   .alt-features-grid{
+    margin-top: -70px;
+}
+.alt-features-item{
+    margin-top: 70px;
+}
+.alt-features-icon{
+    padding-top: 10px;
+    font-size: 48px;
+    line-height: 1.3;
+    color: #4d80b3;
+}
+.alt-features-icon img{
+    width: 100%;
+}
+.alt-features-title{
+    margin-bottom: 21px;
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.4em;
+    color: #4d80b3;
+}
+.alt-features-descr {
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 1.86
+}
+
 header{padding: $header-padding;}
 .northeast{background-color: $northeast-color; h1 {color: $darkbg-font-color;}}
 .north{background-color: $north-color; h1 {color: $darkbg-font-color;}}

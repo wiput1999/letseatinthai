@@ -22,7 +22,7 @@
             <!-- Footer Text -->
             <div class="footer-text">
                 <div class="footer-copy font-alt">
-                    <a href="{{ $about-us }}" target="_blank">&copy; LetsEatinThai 2017</a>.
+                    <a href="" target="_blank">&copy; LetsEatinThai 2017</a>.
                 </div>
                 <div class="footer-made">
                     Made with love.
