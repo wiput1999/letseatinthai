@@ -7,6 +7,12 @@
  * @author   Taylor Otwell <taylor@laravel.com>
  */
 
+//Fix proxy incorrect protocol
+function asset($path)
+{
+    return 'https://' . $_SERVER['HTTP_HOST'] . '/' . trim($path, '/');
+}
+
 define('LARAVEL_START', microtime(true));
 
 /*

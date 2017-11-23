@@ -10,6 +10,7 @@
 
     @yield('content')
 
+    <footer class="page-section bg-gray-lighter footer">
     <!-- Footer -->
         <div class="container">
             <!-- Social Links -->
@@ -22,7 +23,7 @@
             <!-- Footer Text -->
             <div class="footer-text">
                 <div class="footer-copy font-alt">
-                    <a href="{{ $about-us }}" target="_blank">&copy; LetsEatinThai 2017</a>.
+                    <a href="" target="_blank">&copy; LetsEatinThai 2017</a>.
                 </div>
                 <div class="footer-made">
                     Made with love.
@@ -39,7 +40,24 @@
     </footer>
     <!-- End Footer -->
 
+    <script type="text/javascript" src="{{ asset('js/jquery-1.11.2.min.js') }}"></script>
     <script type="text/javascript" src="{{ mix('js/app.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('js/jquery.easing.1.3.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('js/SmoothScroll.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('js/jquery.scrollTo.min.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('js/jquery.localScroll.min.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('js/jquery.viewport.mini.js') }}"></script>yarb
+    <script type="text/javascript" src="{{ asset('js/jquery.countTo.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('js/jquery.appear.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('js/jquery.sticky.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('js/jquery.parallax-1.1.3.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('js/jquery.fitvids.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('js/isotope.pkgd.min.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('js/imagesloaded.pkgd.min.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('js/jquery.magnific-popup.min.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('js/wow.min.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('js/masonry.pkgd.min.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('js/all.js') }}"></script>
 
 </body>
 </html>
