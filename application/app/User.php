@@ -26,4 +26,13 @@ class User extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
+
+    protected $casts = [
+        'admin' => 'boolean',
+    ];
+
+    public function setPasswordAttribute($value)
+    {
+        return $this->attributes['password'] = \Hash::make($value);
+    }
 }

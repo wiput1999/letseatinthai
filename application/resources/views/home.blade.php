@@ -5,13 +5,13 @@
 <!-- Page Wrap -->
 <div class="page" id="top">
 
-    <section class="home-section bg-dark bg-dark-alfa-70" data-background="video/video-restaurant.jpg" id="home">
+    <section class="home-section bg-dark bg-dark-alfa-70" data-background="{{ asset('/images/poster.jpg') }} id="home">
         <div class="js-height-full container">
 
             <div class="bg-video-wrapper">
                 <div class="bg-video-overlay bg-dark-alfa-30"></div>
                 <video poster="{{ asset('/images/poster.jpg') }}" id="bgvid" autoplay muted loop>
-                <source src="{{ asset('/video/video-restaurant.mp4') }}" type="video/mp4">
+                <source src="{{ asset('/images/video-restaurant.mp4') }}" type="video/mp4">
                 </video>
             </div>
 
