@@ -52,6 +52,7 @@
     <script type="text/javascript" src="{{ asset('js/jquery.sticky.js') }}"></script>
     <script type="text/javascript" src="{{ asset('js/jquery.parallax-1.1.3.js') }}"></script>
     <script type="text/javascript" src="{{ asset('js/jquery.fitvids.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('js/owl.carousel.min.js') }}"></script>
     <script type="text/javascript" src="{{ asset('js/isotope.pkgd.min.js') }}"></script>
     <script type="text/javascript" src="{{ asset('js/imagesloaded.pkgd.min.js') }}"></script>
     <script type="text/javascript" src="{{ asset('js/jquery.magnific-popup.min.js') }}"></script>
