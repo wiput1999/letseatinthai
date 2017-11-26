@@ -5,7 +5,7 @@
 <!-- Page Wrap -->
 <div class="page" id="top">
 
-    <section class="home-section bg-dark bg-dark-alfa-70" data-background="{{ asset('/images/poster.jpg') }} id="home">
+    <section class="home-section bg-dark" data-background="{{ asset('/images/poster.jpg') }} id="home">
         <div class="js-height-full container">
 
             <div class="bg-video-wrapper">
@@ -27,6 +27,10 @@
                 </h2>
 
                 </div>
+            </div>
+
+            <div class="local-scroll">
+                <a href="#steps" class="scroll-down"><i class="fa fa-angle-down scroll-down-icon"></i></a>
             </div>
 
         </div>
@@ -82,6 +86,27 @@
 
         </div>
     </section>
+
+    <section class="page-section bg-gray-lighter" id="browse">
+        <div class="container relative">
+
+            <div class="section-text align-center">
+                <div class="row">
+                    <div class="col-sm-8 col-sm-offset-2">
+                        <p class="lead">
+                            Can't find the restaurant yet?
+                        </p>
+                        <div>
+                            <a href="#" class="btn btn-mod btn-medium btn-round">Discover Nearby Restaurant</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
 </div>
+
+<footer class="page-section footer">
 
 @endsection

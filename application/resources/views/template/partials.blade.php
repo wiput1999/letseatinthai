@@ -10,7 +10,7 @@
 
     @yield('content')
 
-    <footer class="page-section bg-gray-lighter footer">
+    
     <!-- Footer -->
         <div class="container">
             <!-- Social Links -->

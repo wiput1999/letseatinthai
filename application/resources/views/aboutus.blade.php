@@ -1,7 +1,7 @@
 @extends('template.partials')
 @section('content')
 {{--subNavbar--}}
-@include('template.subnav')
+@include('template.nav')
 
 <link href="aboutus.css" rel="stylesheet" type="text/css">
 
@@ -57,3 +57,7 @@
     </div>
   </div>
 </section>
+
+<footer class="page-section footer">
+
+@endsection
