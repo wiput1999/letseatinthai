@@ -108,5 +108,5 @@
 </div>
 
 <footer class="page-section footer">
-
+@include('template.footer')
 @endsection

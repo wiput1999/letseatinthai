@@ -3,14 +3,24 @@
 {{--subNavbar--}}
 @include('template.nav')
 
-<link href="aboutus.css" rel="stylesheet" type="text/css">
+<div class="page aboutus">
+    <header>
+        <div class="relative container align-left">
 
-<section>
+            <div class="row">
+                <div class="col-md-8">
+                    <h1 class="hs-line-11 font-alt mb-20 mb-xs-0">About Us</h1>
+                </div>
+            </div>
+
+        </div>
+    </header>
+
+<section class="page-section">
   <div class="container">
     <div class="row">
       <div class="col-lg-12 text-center">
-        <h2 class="section-heading text-uppercase">About Us</h2>
-        <h3 class="section-subheading text-muted">Our teammates.</h3>
+        <h3 class="section-subheading mb-20">We made this</h3>
       </div>
     </div>
     <div class="row">
@@ -35,7 +45,7 @@
           <p class="text-muted">Wan</p>
         </div>
       </div>
-      <div class="col-sm-4">
+      <div class="col-lg-offset-2 col-sm-4">
         <div class="team-member">
           <img class="mx-auto rounded-circle" src="{{ asset('/images/team/183.jpg') }}" alt="">
           <h4>Teerapat Kraisrisirikul</h4>
@@ -51,7 +61,7 @@
       </div>
     </div>
     <div class="row">
-      <div class="col-lg-8 mx-auto text-center">
+      <div class="col-lg-12 mx-auto text-center">
         <p class="large text-muted">(Custom Text)</p>
       </div>
     </div>
@@ -59,5 +69,5 @@
 </section>
 
 <footer class="page-section footer">
-
+@include('template.footer')
 @endsection

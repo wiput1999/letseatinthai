@@ -13,8 +13,8 @@
     <!-- Main Menu -->
     <div class="inner-nav desktop-nav">
         <ul class="clearlist">
-            <li><a href="{{ $home }}">Home</i></a></li>
-            <li><a href="{{ $about-us }}">About Us</a></li>
+            <li><a href="./">Home</i></a></li>
+            <li><a href="aboutus">About Us</a></li>
             <li><a>&nbsp;</a></li>
 
             <li><a href="{{ $order }}"><i class="fa fa-shopping-cart"></i> Your Order(0)</a></li>

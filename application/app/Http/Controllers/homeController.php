@@ -11,6 +11,18 @@ class homeController extends Controller
         return view('home');
     }
 
+    public function getAbout() {
+        return view('about-us');
+    }
+
+    public function getLogin() {
+        return view('login');
+    }
+
+    public function getDashboard() {
+        return view('dashboard');
+    }
+
     public function getTestFile($filename) {
 
         $exists = Storage::exists($filename);
