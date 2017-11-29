@@ -16,7 +16,7 @@
     <script type="text/javascript" src="{{ asset('js/SmoothScroll.js') }}"></script>
     <script type="text/javascript" src="{{ asset('js/jquery.scrollTo.min.js') }}"></script>
     <script type="text/javascript" src="{{ asset('js/jquery.localScroll.min.js') }}"></script>
-    <script type="text/javascript" src="{{ asset('js/jquery.viewport.mini.js') }}"></script>yarb
+    <script type="text/javascript" src="{{ asset('js/jquery.viewport.mini.js') }}"></script>
     <script type="text/javascript" src="{{ asset('js/jquery.countTo.js') }}"></script>
     <script type="text/javascript" src="{{ asset('js/jquery.appear.js') }}"></script>
     <script type="text/javascript" src="{{ asset('js/jquery.sticky.js') }}"></script>
