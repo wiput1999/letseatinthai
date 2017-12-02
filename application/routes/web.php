@@ -16,3 +16,9 @@ Route::get('/', 'homeController@getHome');
 Route::get('/home/{filename}', 'homeController@getTestFile');
 
 Route::get('/session', 'homeController@getTestSession');
+
+Route::get('/about-us', 'homeController@getAbout');
+
+Route::get('/login', 'homeController@getLogin');
+
+Route::get('/dashboard', 'homeController@getDashboard');

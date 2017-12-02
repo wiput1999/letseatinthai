@@ -1,6 +1,6 @@
 @extends('template.partials')
 @section('content')
-<div class="page">
+<div class="page no-footer">
 
     <!-- Home Section -->
     <section class="home-section login" id="login">

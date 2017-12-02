@@ -13,8 +13,8 @@
         <!-- Main Menu -->
         <div class="inner-nav desktop-nav">
             <ul class="clearlist local-scroll">
-                <li><a class="active" href="">Home</a></li>
-                <li><a href="">About Us</a></li>
+                <li><a class="active" href="./">Home</a></li>
+                <li><a href="about-us">About Us</a></li>
 
             </ul>
         </div>

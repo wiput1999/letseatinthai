@@ -66,4 +66,7 @@
     </div>
     </section>
 </div>
+
+<footer class="page-section bg-gray-lighter footer">
+@include('template.footer')
 @endsection
