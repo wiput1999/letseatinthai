@@ -10,16 +10,17 @@
                 <div class="home-text">
 
                     <h2 class="section-title font-alt mb-40 mb-sm-0 white">
-                        Admin
+                        Portal Login
                     </h2>
 
                     <div class="row">
                         <div class="col-sm-4 mb-40">
                         </div>
                         <div class="col-sm-4 mb-40">
-                        <form method="post" action="#" id="admin-login" role="form" class="form">
+                        <form method="post" action="{{ route('portal.doLogin') }}" id="admin-login" role="form" class="form">
+                            {{ csrf_field() }}
                             <div class="mb-20 mb-md-10">
-                                <input type="text" name="username" id="username" class="input-md form-control" placeholder="Username" maxlength="100">
+                                <input type="text" name="email" id="username" class="input-md form-control" placeholder="e-mail address" maxlength="100">
                             </div>
                             <div class="mb-20 mb-md-10">
                                 <input type="password" name="password" id="password" class="input-md form-control" placeholder="Password" maxlength="100">
