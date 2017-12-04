@@ -22,3 +22,5 @@ Route::get('/about-us', 'homeController@getAbout');
 Route::get('/login', 'homeController@getLogin');
 
 Route::get('/dashboard', 'homeController@getDashboard');
+
+Route::get('/restaurants', 'homeController@getRestaurants');

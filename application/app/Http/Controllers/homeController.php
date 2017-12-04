@@ -23,6 +23,10 @@ class homeController extends Controller
         return view('dashboard');
     }
 
+    public function getRestaurants() {
+        return view('restaurants');
+    }
+
     public function getTestFile($filename) {
 
         $exists = Storage::exists($filename);

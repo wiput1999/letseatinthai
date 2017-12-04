@@ -62,7 +62,7 @@
     </div>
     <div class="row">
       <div class="col-lg-12 mx-auto text-center">
-        <p class="large text-muted">(Custom Text)</p>
+        <p class="large text-muted">This project is a part of the subject Information Technology Fundamentals, Faculty of Information Technology, King Mongkut's Institute of Technology Ladkrabang (KMITL).</p>
       </div>
     </div>
   </div>
