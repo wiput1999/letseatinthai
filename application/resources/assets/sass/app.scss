@@ -307,7 +307,6 @@ h2{font-size: $h2-size;}
     vertical-align: middle;
     font-size: 12px;
     font-weight: 400;
-    text-transform: uppercase;
     letter-spacing: 1px;
     color: $text-color;
     border: 1px solid rgba(0,0,0, .1);
@@ -438,6 +437,9 @@ a.logo:hover{
 .aboutus .main-nav{background: $main-color;}
 .aboutus header{background: $main-color;}
 .aboutus h1{color: #FFF;}
+.restaurnat .main-nav{background: $main-color;}
+.restaurant header{background: $main-color;}
+.restaurant h1{color: #FFF;}
 .login {background-color: $main-color;}
 #login_btn {background-color: #73A1CD; width: 100%;}
 .northeast .main-nav{background: $northeast-nav;}

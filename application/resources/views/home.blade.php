@@ -97,7 +97,7 @@
                             Can't find the restaurant yet?
                         </p>
                         <div>
-                            <a href="#" class="btn btn-mod btn-medium btn-round">Discover Nearby Restaurant</a>
+                            <a href="restaurants" class="btn btn-mod btn-medium btn-round">Discover Nearby Restaurants</a>
                         </div>
                     </div>
                 </div>
