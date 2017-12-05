@@ -12,7 +12,7 @@ class homeController extends Controller
     }
 
     public function getAbout() {
-        return view('about-us');
+        return view('about');
     }
 
     public function getLogin() {

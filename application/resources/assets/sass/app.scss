@@ -508,7 +508,7 @@ a.logo:hover{
     cursor: pointer;
 
     user-select: none;
-    @include cubic_form()
+    @include cubic_form();
 
     transition-property:  background, color;
 
@@ -921,16 +921,16 @@ a.link-to-top {
 
 /* Dashboard */
 .thumbnail_hover {
-    &:hover{
-        background-color: #efefef;
-        transition: .3s;
-      }
-      .caption {
-            &:hover{
-                box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
-            }
-      } 
-} 
+    //&:hover{
+    //    background-color: #efefef;
+    //    transition: .3s;
+    //  }
+    //  .caption {
+    //        &:hover{
+    //            box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+    //        }
+    //  }
+}
   
   .en{
     position: relative;

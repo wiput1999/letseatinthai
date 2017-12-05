@@ -17,10 +17,15 @@ Route::get('/home/{filename}', 'homeController@getTestFile');
 
 Route::get('/session', 'homeController@getTestSession');
 
-Route::get('/about-us', 'homeController@getAbout');
-
-Route::get('/login', 'homeController@getLogin');
+Route::get('/about', 'homeController@getAbout');
 
 Route::get('/dashboard', 'homeController@getDashboard');
 
+
 Route::get('/restaurants', 'homeController@getRestaurants');
+
+Route::group(['prefix' => 'portal'], function() {
+    Route::get('/login', ['as' => 'portal.login', 'uses' => 'AuthController@getLogin']);
+    Route::post('/login', ['as' => 'portal.doLogin', 'uses' => 'AuthController@doLogin']);
+
+});
