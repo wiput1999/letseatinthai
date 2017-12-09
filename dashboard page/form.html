@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <title>Menu form</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+</head>
+<body style="background-color: #F7F7F9;">
+  <div class="container" style="padding: 10px;"">
+    <h2 style="text-align: center;">เพิ่มเมนูอาหาร</h2>
+    <hr>
+    <div class="alert alert-danger" role="alert">
+     <ul>
+      <li>อายุต้องอยู่ระหว่าง 1 ถึง 100</li>
+      <li>รูปแบบอีเมลไม่ถูกต้อง</li>
+      <li>รูปแบบเบอร์โทรศัพท์ไม่ถูกต้อง</li>
+    </ul>
+    </div>
+  <form>
+    <div class="form-row">
+      <div class="form-group col-md-6">
+        <label for="inputEmail4">ชื่อเมนู (ไทย)</label>
+        <input type="text" class="form-control" id="validationDefault01" placeholder="ชื่อเมนู" required>
+      </div>
+      <div class="form-group col-md-6">
+        <label for="inputPassword4">ชื่อเมนู (อังกฤษ)</label>
+        <input type="text" class="form-control" id="validationDefault02" placeholder="Menu name" required>
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="exampleFormControlTextarea1">รายละเอียด (ไทย)</label>
+      <textarea class="form-control" id="exampleFormControlTextarea1" placeholder="รายระเอียดของเมนู" rows="3"></textarea>
+    </div>
+    <div class="form-group">
+      <label for="exampleFormControlTextarea1">รายละเอียด (อังกฤษ)</label>
+      <textarea class="form-control" id="exampleFormControlTextarea1" placeholder="menu description" rows="3"></textarea>
+    </div>
+    <div class="form-group">
+      <label for="exampleFormControlFile1">สถานะเมนู :  </label>
+      <select class="custom-select">
+        <option selected="">สถานะเมนู</option>
+        <option value="1">พร้อมขาย</option>
+        <option value="2">ยังไม่พร้อมขาย</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="exampleFormControlFile1">รูปภาพอาหาร</label>
+      <input type="file" class="form-control-file" id="exampleFormControlFile1" required>
+    </div>
+    <div class="row" style="margin-left: 0px;">
+      <div class="form-group">
+        <label class="control-label">ราคาอาหาร</label>
+        <div class="form-group">
+          <label class="sr-only" for="exampleInputAmount">Amount (in THB)</label>
+          <div class="input-group">
+            <div class="input-group-addon">฿</div>
+            <input type="text" class="form-control" id="exampleInputAmount" placeholder="ราคา">
+          </div>
+        </div>
+      </div>
+    </div>
+    <button class="btn btn-primary" type="submit">เพิ่มเมนู</button>
+  </form>
+</div>
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+</body>
+</html>
