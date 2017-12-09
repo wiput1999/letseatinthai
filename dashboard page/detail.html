@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+  <title>Let's Eat in TH Dashboard</title>
+
+  <!-- Bootstrap -->
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
+
+  <!-- makeup css -->
+  <link rel="stylesheet" href="makeup.css">
+
+  <!-- masonry-docs -->
+  <style>
+  .butn{
+    text-align: right;
+  }
+  .detail{
+    padding: 40px 40px 30px;
+    font-size: 120%;
+  }
+  .detail h2{ 
+    font-size: 180%;
+    color: black;
+  }
+  .detail li{
+    padding-bottom:15px;
+  }
+  hr {
+    max-width: 50px;
+    border-width: 3px;
+    border-color: #1F1E1E; }
+  }
+</style>
+
+
+</head>
+<body>
+  <div class="container-fluid" style="padding-top: 10px;">
+    <div class="col-lg-12 ble ">
+      <nav class="bll">
+        <div class="blf">
+          <button class="bkb bkd blg collapsed" type="button" data-toggle="collapse" data-target="#nav-toggleable-md" aria-expanded="false">
+            <span class="yz">Toggle nav</span>
+          </button>
+          <a class="blh bmh" href="index.html">
+            <span class="bv bch bli"></span>
+          </a>
+        </div>
+
+        <div class="bki collapse " id="nav-toggleable-md" style="">
+          <ul class="nav lq nav-stacked st">
+            <li class="asv">Dashboards</li>
+            <li class="lp">
+              <a class="ln" href="#">Category</a>
+            </li>
+            <li class="lp">
+              <a class="ln " href="#">Menu list</a>
+            </li>
+            <li class="lp">
+              <a class="ln " href="#">Edit profile</a>
+            </li>
+          </li>
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="#about">Login</a></li>
+          </ul>
+        </ul>
+      </div>
+    </nav>
+  </div>
+
+  <div class="col-sm-12 main">
+    <div class="container">
+      <div class="col-xs-12 col-md-8">
+        <img class="img-responsive" src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/Phat_Thai_kung_Chang_Khien_street_stall.jpg/1200px-Phat_Thai_kung_Chang_Khien_street_stall.jpgg" alt="Burger">
+      </div>
+      <div class="col-xs-6 col-md-4" style="background-color: #F3F3F3;">
+        <div class="detail">
+          <!-- Name in That -->
+          <h2>ผัดไทย</h2> 
+          <!-- Name in English -->
+          <h3>Padthai</h3>
+          <hr>
+          <ul>
+            <li>เป็นอาหารไทยที่สามารถหารับประทานได้ทั่วประเทศไทย โดยเฉพาะในภาคกลาง และอาจพบได้ในร้านอาหารไทยในต่างประเทศบางแห่ง</li>
+
+            <li>Rice noodle stir-fry with scrambled egg, napa and red cabbage, citrus, peanuts, Asian sprouts, green onions and cilantro.</li>
+            </ul>
+            <p>ราคา : 50 บาท</p>
+            <button class="btn btn-warning" type="submit">แก้ไขเมนู</button>
+          </div>
+        </div>
+      </div>
+
+
+      <!-- <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main"> -->
+        <!-- <div class="row"> -->
+
+
+          <!-- </div> -->
+          <!-- </div> -->
+
+
+
+          <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+          <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+          <!-- Include all compiled plugins (below), or include individual files as needed -->
+          <script src="bootstrap/js/bootstrap.min.js"></script>
+          <script src="js/masonry.pkgd.min.js"></script>
+          <script type="text/javascript">
+            $('.grid').masonry({
+      // options
+      itemSelector: '.grid-item',
+    });
+  </script>
+
+</body>
+</html>
