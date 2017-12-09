@@ -20,10 +20,10 @@
                         <form method="post" action="{{ route('portal.doLogin') }}" id="admin-login" role="form" class="form">
                             {{ csrf_field() }}
                             <div class="mb-20 mb-md-10">
-                                <input type="text" name="email" id="username" class="input-md form-control" placeholder="e-mail address" maxlength="100">
+                                <input type="text" name="email" id="username" class="input-md form-control" placeholder="E-MAIL ADDRESS">
                             </div>
                             <div class="mb-20 mb-md-10">
-                                <input type="password" name="password" id="password" class="input-md form-control" placeholder="Password" maxlength="100">
+                                <input type="password" name="password" id="password" class="input-md form-control" placeholder="PASSWORD">
                             </div>
                             <div class="mb-20 mb-md-10">
                             <button class="submit_btn btn btn-mod btn-medium btn-round" id="login_btn">Login</button>

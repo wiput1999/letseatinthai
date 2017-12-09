@@ -19,13 +19,29 @@ Route::get('/session', 'homeController@getTestSession');
 
 Route::get('/about', 'homeController@getAbout');
 
-Route::get('/dashboard', 'homeController@getDashboard');
-
-
 Route::get('/restaurants', 'homeController@getRestaurants');
 
+Route::group(['prefix' => 'api'], function () {
+    Route::get('/restaurant/{filename}');
+
+    Route::get('/food/{filename}');
+
+});
+
 Route::group(['prefix' => 'portal'], function() {
-    Route::get('/login', ['as' => 'portal.login', 'uses' => 'AuthController@getLogin']);
-    Route::post('/login', ['as' => 'portal.doLogin', 'uses' => 'AuthController@doLogin']);
+    Route::get('/login', ['as' => 'login', 'uses' => 'AuthController@getLogin']);
+
+    Route::post('/login', ['as' => 'portal.doLogin', 'uses' => 'Auth\LoginController@login']);
+
+    Route::group(['middleware' => 'auth'], function () {
+        Route::get('/logout', ['as' => 'logout', 'uses' => 'AuthController@doLogout']);
+
+        Route::get('/dashboard', ['as' => 'portal.dashboard', 'uses' => 'dashboardController@getDashboard']);
+
+        Route::group(['prefix' => 'admin'], function () {
+           Route::get('/overview');
+        });
+
+    });
 
 });

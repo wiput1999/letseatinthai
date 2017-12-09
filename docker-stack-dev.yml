@@ -9,7 +9,7 @@ services:
       - MYSQL_ROOT_PASSWORD=123456
       - MYSQL_DATABASE=letseatinthai
       - MYSQL_USER=letseatinthai
-      - MYSQL_PASSWORD=Letseatinthai#2017
+      - MYSQL_PASSWORD=s6AeHwCq6MxHwjNBZfHmLA4udZ
   redis:
     image: redis:latest
     ports:
