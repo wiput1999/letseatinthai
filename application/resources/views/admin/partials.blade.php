@@ -13,7 +13,7 @@
 </head>
 <body>
 
-    @include('backend.nav')
+    @include('admin.nav')
 
     <div class="container-fluid no-footer">
         <div class="col-sm-12 main">
@@ -23,6 +23,5 @@
 
     <script type="text/javascript" src="{{ asset('js/jquery-1.11.2.min.js') }}"></script>
     <script type="text/javascript" src="{{ mix('js/app.js') }}"></script>
-    @yield('js')
 </body>
 </html>

@@ -15,7 +15,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password',
+        'name', 'email', 'password', 'restaurant'
     ];
 
     /**
@@ -30,9 +30,4 @@ class User extends Authenticatable
     protected $casts = [
         'admin' => 'boolean',
     ];
-
-    public function setPasswordAttribute($value)
-    {
-        return $this->attributes['password'] = \Hash::make($value);
-    }
 }

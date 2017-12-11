@@ -11,20 +11,18 @@
 |
 */
 
-Route::get('/', 'homeController@getHome');
-
-Route::get('/home/{filename}', 'homeController@getTestFile');
+Route::get('/', 'homeController@getHome')->name('home');
 
 Route::get('/session', 'homeController@getTestSession');
 
-Route::get('/about', 'homeController@getAbout');
+Route::get('/about', 'homeController@getAbout')->name('about');
 
-Route::get('/restaurants', 'homeController@getRestaurants');
+Route::get('/restaurants', 'homeController@getRestaurants')->name('browse');
 
 Route::group(['prefix' => 'api'], function () {
-    Route::get('/restaurant/{filename}');
+    Route::get('/restaurant/{id}', 'PhotoController@getRestaurantPhoto');
 
-    Route::get('/food/{filename}');
+    Route::get('/food/{id}');
 
 });
 
@@ -36,10 +34,35 @@ Route::group(['prefix' => 'portal'], function() {
     Route::group(['middleware' => 'auth'], function () {
         Route::get('/logout', ['as' => 'logout', 'uses' => 'AuthController@doLogout']);
 
-        Route::get('/dashboard', ['as' => 'portal.dashboard', 'uses' => 'dashboardController@getDashboard']);
+        Route::group(['middleware' => 'user'], function () {
+            Route::get('/dashboard', ['as' => 'portal.dashboard', 'uses' => 'dashboardController@getDashboard']);
 
-        Route::group(['prefix' => 'admin'], function () {
-           Route::get('/overview');
+            Route::get('/menu/new', ['as' => 'portal.menu.new', 'uses' => 'MenuController@getNewMenu']);
+
+            Route::post('/menu/new', ['as' => 'portal.menu.new.store', 'uses' => 'MenuController@doNewMenu']);
+        });
+
+        Route::group(['prefix' => 'admin', 'middleware' => 'admin'], function () {
+            Route::get('/overview', ['as' => 'admin.dashboard', 'uses' => 'adminController@getDashboard']);
+
+            Route::get('/overview/{id}', ['as', 'admin.restaurant.info']);
+
+            Route::get('/categories', ['as' => 'admin.categories', 'uses' => 'adminController@getCategoriesList']);
+
+            Route::get('/categories/new', ['as' => 'admin.categories.new', 'uses' => 'adminController@getNewCategories']);
+
+            Route::post('/categories/new', ['as' => 'admin.categories.new.store', 'uses' => 'adminController@doStoreCategories']);
+
+            Route::get('/restaurant/new', ['as' => 'admin.restaurant.new', 'uses' => 'adminController@getNewRestaurant']);
+
+            Route::post('/restaurant/new', ['as' => 'admin.restaurant.new.store', 'uses' => 'adminController@doStoreNewRestaurant']);
+
+            Route::get('/collection', ['as' => 'admin.collection', 'uses' => 'adminController@getCollectionsList']);
+
+            Route::get('/collection/new', ['as' => 'admin.collection.new', 'uses' => 'adminController@getNewCollections']);
+
+            Route::post('/collection/new', ['as' => 'admin.collection.new.store', 'uses' => 'adminController@doStoreCollections']);
+
         });
 
     });

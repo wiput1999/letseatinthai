@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
+use App\Restaurants;
 
 class homeController extends Controller
 {
@@ -19,12 +20,10 @@ class homeController extends Controller
         return view('login');
     }
 
-    public function getDashboard() {
-        return view('dashboard');
-    }
-
     public function getRestaurants() {
-        return view('restaurants');
+        $restaurants = Restaurants::all();
+
+        return view('restaurants', ['restaurants' => $restaurants]);
     }
 
     public function getTestFile($filename) {

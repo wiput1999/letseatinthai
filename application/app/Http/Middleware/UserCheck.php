@@ -5,7 +5,7 @@ namespace App\Http\Middleware;
 use Closure;
 use Illuminate\Support\Facades\Auth;
 
-class AdminCheck
+class UserCheck
 {
     /**
      * Handle an incoming request.
@@ -16,10 +16,10 @@ class AdminCheck
      */
     public function handle($request, Closure $next)
     {
-        if (Auth::user() &&  Auth::user()->admin == 1) {
+        if (Auth::user() &&  Auth::user()->admin == 0) {
             return $next($request);
         }
 
-        return redirect(route('portal.dashboard'));
+        return redirect(route('admin.dashboard'));
     }
 }

@@ -18,30 +18,33 @@
         <div class="container relative">
 
             <div class="row">
+                @foreach($restaurants as $restaurant)
                 <!-- Restaurant Loop Start -->
                 <div class="card col-sm-12 col-md-6 col-lg-6 mb-60 mb-xs-40">
                     <div class="col-lg-5">
                         <!-- Restaurant image -->
                         <div class="menu-item">
-                            <img src=""  />
+                            <img src="{{ URL('/api/restaurant/'.$restaurant['id']) }}"  />
                         </div>
                     </div>
 
                     <div class="col-lg-7">
                         <!-- Name -->
                         <div class="food-title font-alt">
-                            <a href=""><!-- Restaurant Name --></a>
+                            <a href="">{{ $restaurant['name_en'] }}</a>
                         </div>
                         <!-- Location -->
                         <div class="food-info">
-                            <!-- Restaurant Des. and Location -->
+                            {{ $restaurant['description_en'] }}
                         </div>
                         <div class="post-prev-more">
+                            <a href="" class="btn add-to-order btn-mod btn-round">Detail <i class="fa fa-info-circle"></i></a>
                             <a href="" class="btn add-to-order btn-mod btn-round">Navigate <i class="fa fa-location-arrow"></i></a>
                         </div>
                     </div>
                 </div>
                 <!-- End Restaurant Loop -->
+                @endforeach
 
             </div>
         </div>

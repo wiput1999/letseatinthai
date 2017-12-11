@@ -13,10 +13,12 @@ class CreateRestaurantTable extends Migration
      */
     public function up()
     {
-        Schema::create('restaurant', function (Blueprint $table) {
+        Schema::create('restaurants', function (Blueprint $table) {
             $table->increments('id');
             $table->string('name_th');
             $table->string('name_en');
+            $table->string('description_th');
+            $table->string('description_en');
             $table->string('location_lat');
             $table->string('location_lng');
             $table->string('photo');
@@ -33,6 +35,6 @@ class CreateRestaurantTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('restaurant');
+        Schema::dropIfExists('restaurants');
     }
 }
