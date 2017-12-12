@@ -13,8 +13,8 @@
         <!-- Main Menu -->
         <div class="inner-nav desktop-nav">
             <ul class="clearlist local-scroll">
-                <li><a class="active" href="">Home</a></li>
-                <li><a href="">About Us</a></li>
+                <li><a class="{{ \Request::route()->getName() == "home" ? "active" : "" }}" href="{{ URL('/') }}">Home</a></li>
+                <li><a class="{{ \Request::route()->getName() == "about" ? "active" : "" }}" href="{{ URL('/about') }}">About Us</a></li>
 
             </ul>
         </div>
