@@ -11,7 +11,7 @@
                 <th>Menu name</th>
                 <th>ชื่อเมนู</th>
                 <th>ราคา(฿)</th>
-                <th class="butn"><a class="btn btn-success">Add New Menu</a> </th>
+                <th class="butn"><a class="btn btn-success" href="{{ route('portal.menu.new') }}">Add New Menu</a> </th>
             </tr>
             </thead>
             <tbody>
@@ -22,8 +22,8 @@
                     <td>{{ $food['name_th'] }}</td>
                     <td>{{ $food['price'] }}</td>
                     <td class="butn">
-                        <a class="btn btn-primary">Detail</a>
-                        <a class="btn btn-danger">Delete</a>
+                        <a class="btn btn-primary" href="{{ route('portal.menu.detail', $food['id']) }}">Detail</a>
+                        <a class="btn btn-danger" href="{{ route('portal.menu.delete', $food['id']) }}">Delete</a>
                     </td>
                 </tr>
             @endforeach

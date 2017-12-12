@@ -33,7 +33,7 @@
                         <th>
                             Food
                         </th>
-                        <th>
+                        <th class="text-center">
                             Quantity
                         </th>
                         <th>
@@ -41,37 +41,24 @@
                         </th>
                     </tr>
                     <!-- Loop start -->
-                    <tr>
-                        <td class="hidden-xs order-img">
-                            <a href=""><img src="{{ $img-src }}" alt=""/></a>
-                        </td>
-                        <td>
-                            <a href="#" title="">{{ $food-title}}</a>
-                        </td>
-                        <td>
-                            <form class="form">
-                                <input type="number" class="input-sm" style="width: 60px;" min="1" max="10" value="1" />
-                            </form>
-                        </td>
-                        <td>
-                            <a href=""><i class="fa fa-times"></i> <span class="hidden-xs">Remove</span></a>
-                        </td>
-                    </tr>
+                    @foreach ($foods as $food)
+                        <tr>
+                            <td class="hidden-xs order-img">
+                                <img src="{{ route('api.food.photo', $food['id']) }}" alt="" style="max-width: 200px;"/>
+                            </td>
+                            <td>
+                                <a href="#" title="">{{ $food['name_en'] }}</a>
+                            </td>
+                            <td class="text-center">
+                                <a href="{{ route('cart.minus', $food['id']) }}"><i class="fa fa-minus"></i></a> {{ $order[$food['id']] }} <a href="{{ route('cart.plus', $food['id']) }}"><i class="fa fa-plus"></i></a>
+                            </td>
+                            <td>
+                                <a href="{{ route('cart.delete', $food['id']) }}"><i class="fa fa-times"></i> <span class="hidden-xs">Remove</span></a>
+                            </td>
+                        </tr>
+                    @endforeach
                     <!-- Loop end -->
                 </table>
-
-                <hr />
-
-                <div class="row">
-                    <div class="col-sm-8">
-                    </div>
-                    <div class="col-sm-4 text align-right">
-                        <div>
-                            <a href="" class="btn btn-mod btn-gray btn-round btn-small">Update Order</a>
-                        </div>
-
-                    </div>
-                </div>
 
                 <hr class="mb-60" />
 
@@ -81,12 +68,12 @@
                     <div class="col-sm-6 text align-right pt-10">
 
 
-                        <div>
-                            Total: <strong> {{ }} </strong>
+                        <div style="font-size: 1.5em; margin-bottom: 1em;">
+                            Total: <strong>{{ $total }}</strong>
                         </div>
 
                         <div>
-                            <a href="./checkout" class="btn btn-mod btn-round btn-large">Finish my order</a>
+                            <a href="{{ route('summary') }}" class="btn btn-mod btn-round btn-large">Finish my order</a>
                         </div>
 
                     </div>

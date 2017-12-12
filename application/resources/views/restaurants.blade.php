@@ -38,7 +38,6 @@
                             {{ $restaurant['description_en'] }}
                         </div>
                         <div class="post-prev-more">
-                            <a href="" class="btn add-to-order btn-mod btn-round">Detail <i class="fa fa-info-circle"></i></a>
                             <a href="" class="btn add-to-order btn-mod btn-round">Navigate <i class="fa fa-location-arrow"></i></a>
                         </div>
                     </div>

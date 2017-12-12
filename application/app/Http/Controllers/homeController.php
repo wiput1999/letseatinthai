@@ -4,7 +4,9 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
+
 use App\Restaurants;
+use App\Foods;
 
 class homeController extends Controller
 {
@@ -26,30 +28,10 @@ class homeController extends Controller
         return view('restaurants', ['restaurants' => $restaurants]);
     }
 
-    public function getTestFile($filename) {
-
-        $exists = Storage::exists($filename);
-
-        if (!$exists) {
-            return "File not found!";
-        } else {
-            $metadata =  Storage::getMetaData($filename);
-            session(['key' => 'value2']);
-
-            return response(Storage::get($filename), 200, ['Content-Type' => $metadata['mimetype']]);
-        }
-
-
-//        Metadata
-//        return Storage::disk('gcs')->getMetaData('test.png');
-//        Get file raw
-//        return Storage::disk('gcs')->get('test.png');
-//        Get and return
-//        return response(Storage::disk('gcs')->get('test.png'), 200, ['Content-Type' => 'image/png']);
-    }
-
     public function getTestSession(Request $request) {
         $data = $request->session()->all();
+//        session(['cart' => [5 => 3]]);
+
         return $data;
     }
 }

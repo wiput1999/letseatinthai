@@ -20,6 +20,7 @@ class CreateFoodTable extends Migration
             $table->string('description_th');
             $table->string('description_en');
             $table->integer('restaurant');
+            $table->integer('categories');
             $table->float('price');
             $table->string('photo');
             $table->boolean('available');

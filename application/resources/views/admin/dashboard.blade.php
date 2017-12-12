@@ -20,8 +20,8 @@
                         <td>{{ $restaurant['name_en'] }}</td>
                         <td>{{ $restaurant['name_th'] }}</td>
                         <td class="butn">
-                            <a class="btn btn-primary">Detail</a>
-                            <a class="btn btn-danger">Delete</a>
+                            <a class="btn btn-primary" href="{{ route('admin.restaurant.detail', $restaurant['id']) }}">Detail</a>
+                            <a class="btn btn-danger" href="{{ route('admin.restaurant.delete', $restaurant['id']) }}">Delete</a>
                         </td>
                     </tr>
                 @endforeach

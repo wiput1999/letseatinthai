@@ -9,6 +9,9 @@ use Illuminate\Support\Facades\Auth;
 class AuthController extends Controller
 {
     public function getLogin() {
+        if (Auth::check()) {
+            return redirect(route('portal.dashboard'));
+        }
         return view('login');
     }
 

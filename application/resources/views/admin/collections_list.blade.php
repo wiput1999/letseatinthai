@@ -20,8 +20,8 @@
                         <td>{{ $collection['name_th'] }}</td>
                         <td>{{ $collection['name_en'] }}</td>
                         <td class="butn">
-                            <a class="btn btn-primary">Edit</a>
-                            <a class="btn btn-danger">Delete</a>
+                            <a class="btn btn-primary" href="{{ route('admin.collection.edit', $collection['id']) }}">Edit</a>
+                            <a class="btn btn-danger" href="{{ route('admin.collection.delete', $collection['id']) }}">Delete</a>
                         </td>
                     </tr>
                 @endforeach

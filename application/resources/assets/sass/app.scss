@@ -433,6 +433,7 @@ a.logo:hover{
     z-index: 1030;
     @include cubic_form;
 }
+.page .your-order{ background-color: $main-color; }
 .no-header .main-nav{background: $main-color;}
 .aboutus .main-nav{background: $main-color;}
 .aboutus header{background: $main-color;}
@@ -489,7 +490,6 @@ a.logo:hover{
         }
     }
 }
-.inner-nav ul > li:first-child > a,
 .inner-nav ul li a:hover,
 .inner-nav ul li a.active{
     color: #000;

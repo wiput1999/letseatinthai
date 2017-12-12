@@ -12,3 +12,8 @@
         <i class="fa fa-check" aria-hidden="true"></i> {{ session('success') }}
     </div>
 @endif
+@if(session()->has('error'))
+    <div class="alert alert-danger col-md-12" role="alert">
+        <i class="fa fa-times" aria-hidden="true"></i> {{ session('error') }}
+    </div>
+@endif
