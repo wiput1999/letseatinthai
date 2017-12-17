@@ -1,7 +1,7 @@
 
 // Fonts
-//@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,500');
-//@import url('https://fonts.googleapis.com/css?family=Kanit:300,400');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,500');
+@import url('https://fonts.googleapis.com/css?family=Kanit:300,400');
 
 // Variables
 @import "variables";
@@ -115,6 +115,7 @@ video {
 section.page-section {padding: 10em 0; background: #FFF;}
 section.small-section{padding: 70px 0;}
 footer.page-section {padding: 10em 0; background: #FFF;}
+footer.bg-gray-lighter{ background-color: #f8f8f8; }
 
 section.bg-white{ background-color: #fff; }
 section.bg-gray-lighter{ background-color: #f8f8f8; }
@@ -151,6 +152,10 @@ h2{font-size: $h2-size;}
 .your-order .hs-line-11 {
   letter-spacing: 0.2em;
   color: $darkbg-font-color;
+}
+
+.your-order .hs-line-4 {
+    color: #FFF;
 }
 
 .section-title {
